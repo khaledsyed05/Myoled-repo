@@ -1,0 +1,54 @@
+.navtop {
+    background-color: red;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    font-weight: bold;
+    font-family: helvetica;
+  }
+  .adminProfile {
+    font-size: 2em;
+  }
+  .sidebar {
+    margin-left: -1em;
+    height:100vh;
+    width: 27%;
+    transition: 0.3s;
+  }
+  .sidebar:hover {
+    margin-left: -1em;
+    width: 100%;
+    transition: 0.3s;
+  }
+  
+  .row {
+    height: 100%;
+  }
+  .nav-link{
+    display: flex;
+  }
+  .nav-link:hover {
+    background-color: #0074d9;
+  }
+  .sidetab {
+    margin-bottom: 10px;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+  }
+  .Navtop {
+    background-color: rgb(47, 255, 0);
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    font-weight: bold;
+    font-family: helvetica;
+  }
+  .centering{
+  margin-top: 15%;
+  }
+  

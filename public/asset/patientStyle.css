@@ -1,0 +1,113 @@
+.colr {
+    background-color: #99cc99;
+}
+.colr:hover {
+    background-color: #6ad889;
+}
+.colr_2 {
+    color: #ba68c8;
+}
+.colr_3 {
+    background-color: #80a480;
+}
+.colr_1 {
+    color: #99cc99;
+}
+.colr_4 {
+    background-color: #ba68c8;
+}
+.colr_4:hover{
+    background-color: #b556c6;
+}
+.zoom {
+    transition: transform 0.2s; 
+    margin: 0 auto;
+    margin-bottom: 1em;
+}
+
+.zoom:hover {
+    transform: scale(
+        1.07
+    );
+}
+.cor {
+    background-color: #99cc99;
+}
+.corbg{
+    background-color: #b8d0b8;
+    margin-bottom: -1rem;
+}
+.corb{
+    margin-top: -1rem;
+    background-color: #d7e5d7;
+    margin-bottom: -1rem;
+}
+.corr{
+    background-color: rgb(254, 242, 253);
+    transition: 0.3s;
+}
+.corr:hover{
+    transition: 0.3s;
+    background-color: rgb(253, 232, 251);
+}
+.coolr{
+    margin-top: -1rem;
+    background-color:rgb(252, 246, 252) ;
+    margin-bottom: -1rem;
+}
+.efmar{
+    margin-left: -5%;
+}
+.effmar_1{
+    margin-right: -20%;
+}
+.body1we {
+    background-color: #f7f7f7;
+  }
+
+  .registration-form {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .registration-form h3 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .registration-form .form-group {
+    margin-bottom: 20px;
+  }
+
+  .registration-form label {
+    font-weight: 500;
+  }
+
+  .registration-form input[type="text"],
+  .registration-form input[type="email"],
+  .registration-form input[type="password"],
+  .registration-form input[type="date"],
+  .registration-form input[type="file"],
+  .registration-form select {
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid #dcdcdc;
+    padding: 12px;
+  }
+
+  .registration-form button[type="submit"] {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+  }
+
+  .registration-form button[type="submit"]:hover {
+    background-color: #0069d9;
+  }
