@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('clinic_working_times', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('clinic_id');
-            $table->string('day_name');
+            $table->string('day');
             $table->time('start_time');
             $table->time('end_time');
 
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('clinic_working_times');
+        Schema::dropIfExists('_clinic_working_times');
     }
 };

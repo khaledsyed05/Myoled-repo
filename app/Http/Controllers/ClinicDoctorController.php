@@ -82,45 +82,45 @@ class ClinicDoctorController extends Controller
 
         return redirect()->route('doctors.index', ['clinicid' => $clinicid, 'doctor' => $doctorid])->with('success', 'Clinic ID removed successfully');
     }
-    public function addWorkingDay(Request $request, clinic $clinic)
-    {
-        $request->validate([
-            'workingDay_id'     => 'required'
-        ]);
-        $workingDay = workingDay::find($request->workingDay_id);
+    // public function addWorkingDay(Request $request, clinic $clinic)
+    // {
+    //     $request->validate([
+    //         'workingDay_id'     => 'required'
+    //     ]);
+    //     $workingDay = workingDay::find($request->workingDay_id);
 
-        $clinic->days()->attach($workingDay);
+    //     $clinic->days()->attach($workingDay);
 
-        return redirect()->back()->with('success', 'Working Day Added');
-    }
+    //     return redirect()->back()->with('success', 'Working Day Added');
+    // }
 
-    public function addWorkingTime(Request $request, clinic $clinic, clinicWorkingTime $day)
-    {
+    // public function addWorkingTime(Request $request, clinic $clinic, clinicWorkingTime $day)
+    // {
 
-        $request->validate([
-            'workingTime_id' => 'required'
-        ]);
+    //     $request->validate([
+    //         'workingTime_id' => 'required'
+    //     ]);
 
-        $time = workingTime::find($request->workingTime_id);
+    //     $time = workingTime::find($request->workingTime_id);
 
-        $clinicDay = $clinic->days()
-            ->where('id', $day->id)
-            ->first();
+    //     $clinicDay = $clinic->days()
+    //         ->where('id', $day->id)
+    //         ->first();
 
-        $clinicDay->times()->attach($time);
+    //     $clinicDay->times()->attach($time);
 
-        return redirect()->back()->with('success', 'Working Time Added');
-    }
-    public function showBookedAppointments(clinic $clinic)
-    {
+    //     return redirect()->back()->with('success', 'Working Time Added');
+    // }
+    // public function showBookedAppointments(clinic $clinic)
+    // {
 
-        $appointments = $clinic->bookedAppointments()
-            ->with(['appointment', 'user', 'doctor'])
-            ->get();
+    //     $appointments = $clinic->bookedAppointments()
+    //         ->with(['appointment', 'user', 'doctor'])
+    //         ->get();
 
-        return view('clinic.bookedAppointments', [
-            'clinic' => $clinic,
-            'appointments' => $appointments
-        ]);
-    }
+    //     return view('clinic.bookedAppointments', [
+    //         'clinic' => $clinic,
+    //         'appointments' => $appointments
+    //     ]);
+    // }
 }

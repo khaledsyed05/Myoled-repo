@@ -58,13 +58,20 @@
                 </div>
             </div>
             <div class="col-md-8">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <a href="{{ route('workingtime.create', ['clinicid' => $clinicid]) }}"
+                            class="btn btn-primary">Add new </a>
+                    </div>
+                </div>
                 <div class="card">
                     <div class="card-body">
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th scope="col">Doctor name</th>
-                                    <th>department</th>
+                                    <th scope="col">Day</th>
+                                    <th>Start time</th>
+                                    <th>End time</th>
                                     <th>Tools</th>
                                 </tr>
                             </thead>
@@ -72,15 +79,19 @@
                                 @foreach ($workingtime as $wt)
                                     <tr>
                                         <td>
-                                                {{ $wt->name }}
-                                            </a>
+                                            {{ $wt->day }}
                                         </td>
-
                                         <td>
-                                            <a href="{{ route('doctor.edit', $doctor->id) }}" class="btn btn-warning">
+                                            {{ $wt->start_time }}
+                                        </td>
+                                        <td>
+                                            {{ $wt->end_time }}
+                                        </td>
+                                        <td>
+                                            <a href="{{ route('doctor.edit', $wt->id) }}" class="btn btn-warning">
                                                 Edit
                                             </a>
-                                            <form action="{{ route('doctor.destroy', $doctor->id) }}" method="POST"
+                                            <form action="{{ route('doctor.destroy', $wt->id) }}" method="POST"
                                                 style="display: inline">
                                                 @csrf
                                                 @method('DELETE')

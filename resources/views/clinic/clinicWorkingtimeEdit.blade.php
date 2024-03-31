@@ -63,12 +63,22 @@
                         Add Clinic Working Time and Days
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('workingtime.store', ['clinicid' => $clinicid]) }}">
+                        <form method="POST" action="{{ route('workingtime.store', 'clinicid') }}">
                             @csrf
+                            @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                        <input type="hidden" name="clinicid" value="{{ $clinicid }}">
 
                             <div class="form-group">
-                                <label for="days">Days</label>
-                                <select id="days" class="js-example-basic-single form-control" name="days[]">
+                                <label for="day">Days</label>
+                                <select id="day" class="js-example-basic-single form-control" name="day">
                                     <option value="monday">Monday</option>
                                     <option value="tuesday">Tuesday</option>
                                     <option value="wednesday">Wednesday</option>
